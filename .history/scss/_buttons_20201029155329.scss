@@ -1,0 +1,7 @@
+button{
+  width: 8rem;
+  height: 4rem;
+  padding: 1rem;
+  border-radius:2.8rem;
+  @include flexSpaceBetween;
+}

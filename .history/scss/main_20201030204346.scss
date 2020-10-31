@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+$font-stack:'Inter',
+sans-serif;
+$primaryColor : rgba(32, 32, 17, 1.0);
+$secondaryColor : rgba(185, 185, 206, 1.0);
+$boxShadowColor:rgba(36, 36, 113, 0.49);
+
+
+
+
+@mixin gridCenter{
+  display: grid;
+  place-items: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@mixin flexSpaceBetween {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: $font-stack;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 24px;
+  height: 100vh;
+  width: 100%;
+  @include flexCenter;
+  flex-direction: column;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  @include gridCenter;
+  grid-template-columns: 1fr;
+}
+  .card{
+  width: 375px;
+  height: 667px;
+  padding: 30px;
+  @include flexSpaceBetween;
+  flex-direction: column;
+  background-image: url(/images/pattern-bg.svg);
+  background-position: top center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  box-shadow: 0 40px 50px 5px $boxShadowColor;
+  position: relative;
+
+  &__header{
+    width: 100%;
+    height: 300px;
+
+
+    &--profileImg{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 40px 50px 5px $boxShadowColor;
+    }
+
+  }
+
+  button {
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 28px;
+    border: none;
+    @include flexSpaceBetween;
+    position:absolute;
+    top:300px
+  }
+
+
+
+  &__body{
+    width: 100%;
+    margin:50px 0;
+    @include gridCenter;
+    gap: 20px;
+
+    h2{
+      font-size: 18px;
+      font-weight: 300;
+      text-align: center;
+      color:$primaryColor;
+    }
+
+    &--captionTxt{
+      width:100px;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 300;
+
+
+      p{
+        color: $primaryColor;
+
+      }
+
+      small{
+        color: $secondaryColor;
+
+      }
+
+    }
+
+  }
+}

@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+$font-stack:'Inter',
+sans-serif;
+$primaryColor : rgba(32, 32, 17, 1.0);
+$secondaryColor : rgba(185, 185, 206, 1.0);
+$boxShadowColor:rgba(36, 36, 113, 0.49);
+
+
+
+
+@mixin gridCenter{
+  display: grid;
+  place-items: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@mixin flexSpaceBetween {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  font-family: $font-stack;
+  font-size: 10px;
+  font-weight: 300;
+  height: 100vh;
+  width: 100%;
+  line-height: 30px;
+  @include flexCenter;
+  flex-direction: column;
+}
+
+.container{
+  width: 100%;
+  max-width: 375px;
+  height: 100vh;
+  @include flexCenter;
+  grid-template-columns: 1fr;
+  background-color: #fff;
+  position: relative;
+}
+  .card{
+  width: 375px;
+  height: 667px;
+  padding: 30px;
+  @include flexSpaceBetween;
+  flex-direction: column;
+  background-image: url(/images/pattern-bg.svg);
+  background-position: top center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  box-shadow: 0 40px 50px 5px $boxShadowColor;
+  position: absolute;
+  transition: all 0.85s ease-in-out;
+
+  &__header{
+    width: 315px;
+    height: 300px;
+
+
+    &--profileImg{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 40px 50px 5px $boxShadowColor;
+    }
+
+  }
+
+  button {
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 28px;
+    border: none;
+    @include flexSpaceBetween;
+    position:absolute;
+    top:310px
+  }
+
+
+
+  &__body{
+    width: 100%;
+    margin:50px 0;
+    @include flexCenter;
+    flex-direction: column;
+
+
+    h2{
+      font-size: 18px;
+      font-weight: 300;
+      text-align: center;
+      color:$primaryColor;
+    }
+
+    &--captionTxt{
+      text-align: left;
+      font-size: 15px;
+      font-weight: 300;
+      @include flexSpaceBetween;
+      flex-direction: column;
+
+
+      p{
+        color: $primaryColor;
+
+      }
+
+      small{
+        color: $secondaryColor;
+
+      }
+
+    }
+
+  }
+}
+
+// .card-two{
+//   transform: translateX(2000px);
+// }
+// .card.active .cardTwo{
+//   transform: translateX(0);
+// }
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media(min-width:768px){
+  .container{
+    max-width: 1440px;
+
+  }
+  .card{
+    width: 1400px;
+    height: 800px;
+    padding: 75px;
+    flex-direction: row-reverse;
+    background-size: cover;
+
+    &__header{
+      width: 540px;
+      height: 540px;
+    }
+
+    &__body{
+      width: 60%;
+      padding: 20px;
+
+
+      h2{
+        font-size: 32px;
+      }
+
+      &--captionTxt{
+      width: 60%;
+      flex-direction: row;
+      font-size: 20px;
+      margin-top: 20px;
+      align-self: flex-start;
+      }
+
+    }
+
+  }
+
+
+  button{
+    right:250px
+  }
+
+}

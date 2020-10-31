@@ -1,0 +1,41 @@
+@use 'variables';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+$font-stack:'Inter',sans-serif;
+
+@mixin gridCenter{
+  display: grid;
+  place-items: center;
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@mixin flexSpaceBetween {
+  @include flexCenter;
+  justify-content: space-between;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: $font-stack;
+  font-size: 10px;
+  font-weight: 300;
+  background-image: url(/images/pattern-bg.svg);
+  background-position: center;
+  background-size:cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  @include flexCenter;
+}
