@@ -119,17 +119,27 @@ body {
 }
 
 .card.active {
-  transform: translateX(-1000px);
-}
-
-.card-two {
-  transform: translateX(2000px);
+  transform: translateX(-2000px);
 }
 
 .card.active .cardTwo {
+  transform: translateX(0px);
+}
+
+.cardTwo {
+  display: none;
+}
+
+/*
+.cardTwo.active {
+  transform: translateX(2000px);
+
+}
+.cardTwo.active .card{
   transform: translateX(0);
 }
 
+*/
 .attribution {
   font-size: 11px;
   text-align: center;
