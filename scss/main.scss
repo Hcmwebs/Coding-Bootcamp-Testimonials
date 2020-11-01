@@ -37,9 +37,9 @@ body{
   font-family: $font-stack;
   font-size: 10px;
   font-weight: 300;
+  line-height: 24px;
   height: 100vh;
   width: 100%;
-  line-height: 30px;
   @include flexCenter;
   flex-direction: column;
 }
@@ -50,22 +50,12 @@ body{
   height: 100vh;
   @include flexCenter;
   grid-template-columns: 1fr;
+  background-color: #fff;
   position: relative;
-
-  .pattern-curve {
-    width: 285px;
-    height: 70px;
-    object-fit: cover;
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-
-  }
 }
   .card{
   width: 375px;
-  height: 700px;
-  margin-top: 100px;
+  height: 667px;
   padding: 30px;
   @include flexSpaceBetween;
   flex-direction: column;
@@ -73,13 +63,13 @@ body{
   background-position: top center;
   background-size:contain;
   background-repeat: no-repeat;
-  // box-shadow: 0 40px 50px 5px $boxShadowColor;
+  box-shadow: 0 40px 50px 5px $boxShadowColor;
   position: absolute;
   transition: all 0.85s ease-in-out;
 
   &__header{
-    width: 315px;
-    height: 310px;
+    width: 100%;
+    height: 300px;
 
 
     &--profileImg{
@@ -100,29 +90,16 @@ body{
     border: none;
     @include flexSpaceBetween;
     position:absolute;
-    top:310px;
-    box-shadow: 0 15px 20px 1px $boxShadowColor;
+    top:310px
   }
 
 
 
   &__body{
     width: 100%;
-    height: 230px;
-    margin: 50px 0;
-    @include flexCenter;
-    flex-direction: column;
-
-    img{
-
-      width: 60px;
-      height: 50px;
-      object-fit: cover;
-      transform: translateY(50px);
-
-    }
-
-
+    margin:50px 0;
+    @include gridCenter;
+    gap: 20px;
 
     h2{
       font-size: 18px;
@@ -132,16 +109,14 @@ body{
     }
 
     &--captionTxt{
-      text-align: left;
+
+      text-align:center;
       font-size: 15px;
       font-weight: 300;
-      @include flexSpaceBetween;
-      flex-direction: column;
 
 
       p{
         color: $primaryColor;
-        margin-bottom: 0;
 
       }
 
@@ -155,117 +130,53 @@ body{
   }
 }
 
-.card.active{
-  transform: translateX(-2000px);
-
-}
-.card.active .cardTwo{
-  transform: translateX(0px);
+.cardTwo {
+ right: -500px;
 }
 
-.cardTwo{
-  display: none;
+.card.active {
+  left: -500px;
 }
-/*
+
+.card.active .cardTwo {
+  right: 500px;
+}
+
 .cardTwo.active {
-  transform: translateX(2000px);
-
+  transform: translateX(700px);
 }
+
 .cardTwo.active .card{
   transform: translateX(0);
 }
 
-*/
+
 
 
 .attribution {
   font-size: 11px;
   text-align: center;
-  transform: translateY(80px);
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
-
-
-@media(min-width:900px){
+@media(min-width:768px){
   .container{
     max-width: 1440px;
-    background-size: contain;
-
-    .pattern-curve {
-      width: 610px;
-      height: 151px;
-      object-fit: cover;
-      position: absolute;
-      bottom:0;
-      left: 0;
-    }
 
   }
   .card{
-    width: 1400px;
-    height: 800px;
-    margin: 0;
-    padding: 75px;
+    height: 375px;
+    width: 700px;
     flex-direction: row-reverse;
-    background-position: bottom right;
-
-
-    &__header{
-      width: 540px;
-      height: 540px;
-    }
-
-    button {
-      width: 112px;
-      height: 56px;
-      padding: 20px;
-      right: 430px;
-      top: 640px;
-
-    }
-
-
-    &__body{
-      width: 60%;
-      line-height: 38px;
-      padding: 20px;
-      position: relative;
-      z-index: 5;
-      left: 70px;
-
-      img{
-        width: 120px;
-        height: 100px;
-      }
-
-
-
-      h2{
-        font-size: 32px;
-      }
-
-      &--captionTxt{
-      width: 50%;
-      flex-direction: row;
-      font-size: 20px;
-      margin: 20px 0;
-      align-self: flex-start;
-
-      }
-
-    }
-
-  }
-  .attribution{
-    transform: translateY(-20px);
+    background-size: cover;
   }
 
 
-
-
+  button{
+    right:250px
+  }
 
 }
