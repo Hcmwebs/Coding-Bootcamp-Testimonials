@@ -1,0 +1,74 @@
+/*=======medias=======*/
+
+@media(min-width:900px) {
+  .container {
+    max-width: 1440px;
+
+  }
+
+  .card {
+    width: 1400px;
+    flex-direction: row-reverse;
+    background-position: bottom right;
+    overflow: hidden;
+
+    &__header {
+      width: 540px;
+      height: 540px;
+      margin: 0;
+
+    }
+
+    button {
+      width: 112px;
+      height: 56px;
+      padding: 30px 20px;
+      right: 480px;
+      top: 575px;
+
+    }
+
+
+    &__body {
+      width: 635px;
+      height: 350px;
+      transform: translateX(70px);
+
+
+      &--pattern-quotes {
+        width: 120px;
+        height: 100px;
+        transform: translate(-150px, 40px);
+      }
+
+
+
+      h2 {
+        font-size: 32px;
+        line-height: 44px;
+        text-align: justify;
+      }
+
+      &--captionTxt {
+        font-size: 20px;
+        text-align: left;
+        flex-direction: row;
+        justify-self: start;
+        align-self: start;
+
+        p {
+          margin-right: 20px;
+        }
+
+      }
+    }
+
+  }
+
+  .pattern-curve {
+    width: 610px;
+    height: 151px;
+
+  }
+
+}
