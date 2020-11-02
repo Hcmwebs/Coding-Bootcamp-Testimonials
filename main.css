@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -86,7 +86,7 @@ body {
   font-size: 18px;
   font-weight: 300;
   text-align: center;
-  color: #202011;
+  color: #202047;
 }
 .card__body--captionTxt {
   display: flex;
@@ -95,14 +95,15 @@ body {
   flex-direction: column;
   margin-top: 20px;
   font-size: 15px;
-  font-weight: 300;
   text-align: center;
 }
 .card__body--captionTxt p {
-  color: #202011;
+  color: #202047;
+  font-weight: 700;
 }
 .card__body--captionTxt small {
   color: #b9b9ce;
+  font-weight: 500;
 }
 
 .cardTwo {

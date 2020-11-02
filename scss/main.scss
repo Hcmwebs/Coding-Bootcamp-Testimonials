@@ -100,17 +100,18 @@ body{
       flex-direction: column;
       margin-top: 20px;
       font-size: 15px;
-      font-weight: 300;
       text-align: center;
 
 
       p{
         color: $primaryColor;
+        font-weight: 700;
 
       }
 
       small{
         color: $secondaryColor;
+        font-weight: 500;
 
       }
 
