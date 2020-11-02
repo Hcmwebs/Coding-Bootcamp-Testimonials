@@ -11,14 +11,14 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="main.css" />
     <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
     <style></style>
   </head>
   <body>
     <div class="container">
-      <div class="card" id="cardOne">
+      <div class="card cardOne" id="cardOne">
         <div class="card__header">
           <img
             src="images/image-tanya.jpg"
@@ -34,7 +34,11 @@
         </button>
 
         <div class="card__body">
-          <img src="images/pattern-quotes.svg" alt="pattern-quotes" />
+          <img
+            src="images/pattern-quotes.svg"
+            alt="pattern-quotes"
+            class="card__body--pattern-quotes"
+          />
           <h2>
             “ I’ve been interested in coding for a while but never taken the
             jump, until now. I couldn’t recommend this course enough. I’m now in
@@ -64,7 +68,11 @@
         </button>
 
         <div class="card__body">
-          <img src="images/pattern-quotes.svg" alt="pattern-quotes" />
+          <img
+            src="images/pattern-quotes.svg"
+            alt="pattern-quotes"
+            class="card__body--pattern-quotes"
+          />
           <h2>
             “ If you want to lay the best foundation possible I’d recommend
             taking this course. The depth the instructors go into is incredible.
@@ -77,13 +85,12 @@
           </div>
         </div>
       </div>
-
-      <img
-        src="/images/pattern-curve.svg"
-        alt="pattern-curve"
-        class="pattern-curve"
-      />
     </div>
+    <img
+      src="/images/pattern-curve.svg"
+      alt="pattern-curve"
+      class="pattern-curve"
+    />
 
     <div class="attribution">
       Challenge by

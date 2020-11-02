@@ -1,23 +1,27 @@
+const container = document.querySelector('.container');
 const card = document.querySelectorAll('.card');
-// const cardTwo = document.getElementById('cardTwo');
-const container = document.querySelector('.container')
+const cardOne = document.getElementById('cardOne');
+const cardTwo = document.getElementById('cardTwo');
+const btnPrimary= document.getElementById('btnPrimary');
+const btnSecondary= document.getElementById('btnSecondary');
 let active = false;
-const btn= document.querySelectorAll('button');
+
+btnPrimary.addEventListener('click', activate);
+btnSecondary.addEventListener('click', reactivate);
 
 
-for(let i = 0; i < card.length; i++ ){
-btn[i].addEventListener('click', activate);
-// btnSecondary.addEventListener('click', activate);
-  function activate(){
+function activate(){
+    cardOne.style.transform ='translateX(-2000px)';
+    cardTwo.style.transform ='translateX(0)';
 
-    if(!active){
-      card[i].classList.add('active');
-      active = true;
-    }
-    else{
-      card[i].classList.remove('active');
-      active = false;
-    }
-  }
 }
+function reactivate(){
+
+    cardOne.style.transform ='translateX(0px)';
+    cardTwo.style.transform ='translateX(2000px)';
+
+}
+
+
+
 
